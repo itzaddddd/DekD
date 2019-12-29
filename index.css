@@ -1,0 +1,22 @@
+.title{
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+    color: #F96519;
+    margin: 20px;
+}
+
+.form-post{
+    margin:50px;
+    display: inline-block;
+    
+}
+
+#post-title{
+    height: 50px;
+    font-size: 25px;
+}
+
+input[type="text"]{
+    width: 1000px;
+}
