@@ -11,7 +11,7 @@
         'content_blank'=>'กรุณาใส่เนื้อหากระทู้',
         'title_err'=>'หัวข้อกระทู้ต้องยาว 4-140 ตัวอักษร',
         'content_err'=>'เนื้อหากระทู้ต้องยาว 6-2000 ตัวอักษร',
-        'title_tag' =>'ชื่อกระทู้จะไม่แสดงผลของ HTML tag'
+        'title_tag' =>'ไม่อนุญาตให้ใส่ HTML tag ในชื่อกระทู้'
     );
     #array for collecting error
     $val_error = [];

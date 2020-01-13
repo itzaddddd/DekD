@@ -19,7 +19,7 @@
         </div>
         <div class="row">
             <div class="col">
-                <?php echo $content?>
+                <article><?php echo $content?></article>
             </div>
         </div>
     </div>

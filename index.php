@@ -17,15 +17,20 @@
     </div>
     <div class="form-post">
         <form action="" method="POST">
-            <?php if(sizeof($val_error)>0){?>
-                <?php for($i=0;$i<sizeof($val_error);$i++){?>
-                    <div class="alert alert-danger" role="alert">
-                        <?php echo $val_error[$i]?>
-                    </div>
+            <!-- check that title part and content part have been checked  -->
+            <?php if(($title_flag) && ($content_flag)){ ?>
+                <!-- if it has errors, show error on web page -->
+                <?php if(sizeof($val_error)>0){?>
+                    <?php for($i=0;$i<sizeof($val_error);$i++){?>
+                        <div class="alert alert-danger" role="alert">
+                            <?php echo $val_error[$i]?>
+                        </div>
+                    <?php }?>
+                <!-- if it does not has errors, go to post page  -->
+                <?php }else{?>
+                    <?php header('Location:post.php');?>
                 <?php }?>
-            <?php }else if(sizeof($val_error)==0 && ($title_flag) && ($content_flag)){?>
-                <?php header('Location:post.php');?>
-            <?php }?>
+            <?php } ?>
             <div class="form-group">
               <input type="text" class="form-control" id="post-title" name="post-title" placeholder="หัวข้อกระทู้" value="<?php echo $title?>">
               <input type="text" class="form-control" id="post-content" name="post-content" placeholder="เนื้อหากระทู้" value="<?php echo $content?>">
